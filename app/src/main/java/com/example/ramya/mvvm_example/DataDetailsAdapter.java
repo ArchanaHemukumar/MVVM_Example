@@ -27,7 +27,8 @@ public class DataDetailsAdapter extends RecyclerView.Adapter<DataViewBindingHold
     @Override
     public void onBindViewHolder(DataViewBindingHolder holder, int position) {
         LayoutDataBinding binding = (LayoutDataBinding) holder.getDataBinding();
-        binding.setVariable(position, new DataViewModel(dataArrayList.get(position)));
+        binding.setData(new DataViewModel(dataArrayList.get(position)));
+//        .setVariable(position, new DataViewModel(dataArrayList.get(position)));
     }
 
     @Override

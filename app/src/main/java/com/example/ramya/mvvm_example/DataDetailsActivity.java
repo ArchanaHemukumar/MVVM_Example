@@ -9,13 +9,12 @@ import java.util.ArrayList;
 
 public class DataDetailsActivity extends AppCompatActivity {
 
-    private ArrayList<Data> dataList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_details);
-        dataList = new ArrayList<>();
+
+        ArrayList<Data> dataList = new ArrayList<>();
 
         Data data = new Data();
         data.setAge("123");
@@ -29,10 +28,10 @@ public class DataDetailsActivity extends AppCompatActivity {
         data2.setAge("12345");
         data2.setName("abcdeft");
 
+        dataList.add(data);
         dataList.add(data1);
-        dataList.add(data1);
-        dataList.add(data1);
-        dataList.add(data1);
+        dataList.add(data2);
+        dataList.add(data);
 
         RecyclerView rvDataList = (RecyclerView) findViewById(R.id.rv_data_list);
         DataDetailsAdapter adapter = new DataDetailsAdapter(dataList);
